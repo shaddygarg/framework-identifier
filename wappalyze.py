@@ -4,7 +4,6 @@ import warnings
 import pkg_resources
 import requests
 from bs4 import BeautifulSoup
-import os
 
 
 def _parse_webpage(url):
@@ -112,7 +111,7 @@ def _get_implied_apps(detected_apps, apps1):
 def analyze():
     url = raw_input('Enter the URL Gaurav: ')
     webpage = _parse_webpage(url)
-    obj = json.loads(pkg_resources.resource_string(__name__, "apps.json"))
+    obj = json.loads(pkg_resources.resource_string(__name__, "data/apps.json"))
     apps = obj['apps']
     detected = []
     for app_name, app in apps.items():
