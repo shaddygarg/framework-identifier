@@ -109,7 +109,7 @@ def _get_implied_apps(detected_apps, apps1):
 
 
 def analyze():
-    url = raw_input('Enter the URL Gaurav: ')
+    url = raw_input('Enter the URL: ')
     webpage = _parse_webpage(url)
     obj = json.loads(pkg_resources.resource_string(__name__, "data/apps.json"))
     apps = obj['apps']
